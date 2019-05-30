@@ -17,6 +17,9 @@ namespace Projecto_Parcial1
     {
         public MainForm()
         {
+            
+  
+
             InitializeComponent();
         }
 
@@ -31,7 +34,7 @@ namespace Projecto_Parcial1
             DescripcionTextBox.Text = string.Empty;
             ExistenumericUpDown.Value = 0;
             CostoNumericUpDown.Value = 0;
-            ValorInventarioNumericUpDown.Value = 0;
+            Valor_inventarioLabel.Text = string.Empty;
 
         }
 
@@ -98,14 +101,14 @@ namespace Projecto_Parcial1
             if(ExistenumericUpDown.Value <= 0)
             {
 
-                MyErrorProvider.SetError(ExistenumericUpDown, "El campo Existe no puede ser negativo");
+                MyErrorProvider.SetError(ExistenumericUpDown, "El campo Existe no puede ser negativo o igual a 0");
                 DescripcionTextBox.Focus();
                 paso = false;
             }
             if(CostoNumericUpDown.Value <= 0)
             {
 
-                MyErrorProvider.SetError(CostoNumericUpDown, "El campo Costo no puede ser negativo");
+                MyErrorProvider.SetError(CostoNumericUpDown, "El campo Costo no puede ser negativo o igual a 0");
                 DescripcionTextBox.Focus();
                 paso = false;
             }
@@ -152,6 +155,16 @@ namespace Projecto_Parcial1
                 MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MyErrorProvider.SetError(ProductoIdNumericUpDown, "No se puede eliminar una persona que no existe");
+        }
+
+        private void CostoNumericUpDown_Leave(object sender, EventArgs e)
+        {
+            int n1, n2, r;
+            
+            n1 = Convert.ToInt32(ExistenumericUpDown.Text);
+            n2 = Convert.ToInt32(CostoNumericUpDown.Text);
+            r = n1 * n2;
+            Valor_inventarioLabel.Text = r.ToString(); 
         }
     }
 }
