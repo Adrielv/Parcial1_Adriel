@@ -7,11 +7,25 @@ using System.Threading.Tasks;
 
 namespace Projecto_Parcial1.Entidades
 {
-    class Producto
+    public class Producto
     {
         [Key]
-        int ProductoId;
-        
+       public int ProductoId { get; set; }
+        public string Descripcion { get; set; }
+        public int Existen { get; set; }
+        public int Costo { get; set; }
+
+        public int Valor_Inventario { get; set; }
+
+        public Producto()
+        {
+            ProductoId = 0;
+            Descripcion = string.Empty;
+            Existen = 0;
+            Costo = 0;
+            Valor_Inventario = 0;
+        }
 
     }
+
 }
