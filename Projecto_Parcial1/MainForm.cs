@@ -16,5 +16,7 @@ namespace Projecto_Parcial1
         {
             InitializeComponent();
         }
+
+     
     }
 }
