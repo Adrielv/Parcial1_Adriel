@@ -8,7 +8,7 @@ using Projecto_Parcial1.Entidades;
 
 namespace Projecto_Parcial1.DAL
 {
-    class Contexto : DbContext 
+    public class Contexto : DbContext 
     {
         public DbSet<Producto> Producto { get; set; }
 
