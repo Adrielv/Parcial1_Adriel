@@ -13,9 +13,9 @@ using Projecto_Parcial1.Entidades;
 
 namespace Projecto_Parcial1
 {
-    public partial class MainForm : Form
+    public partial class Registro_Producto : Form
     {
-        public MainForm()
+        public Registro_Producto()
         {
             
   
@@ -104,7 +104,7 @@ namespace Projecto_Parcial1
             if(ExistenumericUpDown.Value <= 0)
             {
 
-                MyErrorProvider.SetError(ExistenumericUpDown, "El campo Existe no puede ser negativo o igual a 0");
+                MyErrorProvider.SetError(ExistenumericUpDown, "El campo Existen no puede ser negativo o igual a 0");
                 DescripcionTextBox.Focus();
                 paso = false;
             }

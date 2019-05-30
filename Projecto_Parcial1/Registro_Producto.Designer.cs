@@ -1,6 +1,6 @@
 ﻿namespace Projecto_Parcial1
 {
-    partial class MainForm
+    partial class Registro_Producto
     {
         /// <summary>
         /// Required designer variable.

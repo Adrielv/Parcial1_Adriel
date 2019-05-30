@@ -56,16 +56,31 @@
     <Compile Include="BLL\ProductoBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Producto.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro_Producto.Designer.cs">
+      <DependentUpon>Registro_Producto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Valor_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Valor_Inventario.Designer.cs">
+      <DependentUpon>Valor_Inventario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro_Producto.resx">
+      <DependentUpon>Registro_Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,6 +92,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Valor_Inventario.resx">
+      <DependentUpon>Valor_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scrips\Projecto_Parcial1_Query.sql" />
+    <None Include="Resources\refresh.ico" />
     <None Include="Resources\find.ico" />
     <None Include="Resources\file_exclude.ico" />
     <None Include="Resources\file_edit.ico" />
