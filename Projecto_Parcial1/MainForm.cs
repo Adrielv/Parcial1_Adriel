@@ -73,7 +73,9 @@ namespace Projecto_Parcial1
             producto.Descripcion = DescripcionTextBox.Text;
             producto.Existen = Convert.ToInt32(ExistenumericUpDown.Value);
             producto.Costo = Convert.ToInt32(CostoNumericUpDown.Value);
-           
+            producto.Valor_Inventario = (Convert.ToInt32(ExistenumericUpDown.Value) * Convert.ToInt32(CostoNumericUpDown.Value));
+
+
 
             return producto;
         }
@@ -84,6 +86,7 @@ namespace Projecto_Parcial1
             DescripcionTextBox.Text = producto.Descripcion;
             ExistenumericUpDown.Value = producto.Existen;
             CostoNumericUpDown.Value = producto.Costo;
+            Valor_inventarioLabel.Text = Convert.ToString(producto.Existen * producto.Costo);
            
         }
 
