@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ProductoIdNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.ExistenumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CostoNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.ValorInventarioNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.DescripcionTextBox = new System.Windows.Forms.TextBox();
             this.BuscarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductoIdNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistenumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValorInventarioNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -93,40 +96,40 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Valor Inventario";
             // 
-            // numericUpDown1
+            // ProductoIdNumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(157, 35);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(41, 22);
-            this.numericUpDown1.TabIndex = 10;
+            this.ProductoIdNumericUpDown.Location = new System.Drawing.Point(157, 35);
+            this.ProductoIdNumericUpDown.Name = "ProductoIdNumericUpDown";
+            this.ProductoIdNumericUpDown.Size = new System.Drawing.Size(41, 22);
+            this.ProductoIdNumericUpDown.TabIndex = 10;
             // 
-            // numericUpDown2
+            // ExistenumericUpDown
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(157, 110);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown2.TabIndex = 11;
+            this.ExistenumericUpDown.Location = new System.Drawing.Point(157, 110);
+            this.ExistenumericUpDown.Name = "ExistenumericUpDown";
+            this.ExistenumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.ExistenumericUpDown.TabIndex = 11;
             // 
-            // numericUpDown3
+            // CostoNumericUpDown
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(157, 145);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown3.TabIndex = 12;
+            this.CostoNumericUpDown.Location = new System.Drawing.Point(157, 145);
+            this.CostoNumericUpDown.Name = "CostoNumericUpDown";
+            this.CostoNumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.CostoNumericUpDown.TabIndex = 12;
             // 
-            // numericUpDown4
+            // ValorInventarioNumericUpDown
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(157, 188);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown4.TabIndex = 13;
+            this.ValorInventarioNumericUpDown.Location = new System.Drawing.Point(157, 188);
+            this.ValorInventarioNumericUpDown.Name = "ValorInventarioNumericUpDown";
+            this.ValorInventarioNumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.ValorInventarioNumericUpDown.TabIndex = 13;
             // 
-            // textBox1
+            // DescripcionTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(157, 75);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 22);
-            this.textBox1.TabIndex = 14;
+            this.DescripcionTextBox.Location = new System.Drawing.Point(157, 75);
+            this.DescripcionTextBox.Name = "DescripcionTextBox";
+            this.DescripcionTextBox.Size = new System.Drawing.Size(120, 22);
+            this.DescripcionTextBox.TabIndex = 14;
             // 
             // BuscarButton
             // 
@@ -139,53 +142,61 @@
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // EliminarButton
             // 
             this.EliminarButton.Image = global::Projecto_Parcial1.Properties.Resources.file_exclude;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(241, 245);
+            this.EliminarButton.Location = new System.Drawing.Point(241, 241);
             this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(81, 57);
+            this.EliminarButton.Size = new System.Drawing.Size(81, 61);
             this.EliminarButton.TabIndex = 8;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
             // 
             // GuardarButton
             // 
             this.GuardarButton.Image = global::Projecto_Parcial1.Properties.Resources.save_as;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(137, 245);
+            this.GuardarButton.Location = new System.Drawing.Point(137, 241);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(81, 57);
+            this.GuardarButton.Size = new System.Drawing.Size(81, 61);
             this.GuardarButton.TabIndex = 7;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // NuevoButton
             // 
             this.NuevoButton.Image = global::Projecto_Parcial1.Properties.Resources.file_edit;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(32, 245);
+            this.NuevoButton.Location = new System.Drawing.Point(32, 241);
             this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(81, 57);
+            this.NuevoButton.Size = new System.Drawing.Size(81, 61);
             this.NuevoButton.TabIndex = 6;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
+            // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 324);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.DescripcionTextBox);
+            this.Controls.Add(this.ValorInventarioNumericUpDown);
+            this.Controls.Add(this.CostoNumericUpDown);
+            this.Controls.Add(this.ExistenumericUpDown);
+            this.Controls.Add(this.ProductoIdNumericUpDown);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
@@ -197,10 +208,11 @@
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.Text = "Registro de Producto";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductoIdNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistenumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValorInventarioNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,11 +229,12 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button BuscarButton;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown ProductoIdNumericUpDown;
+        private System.Windows.Forms.NumericUpDown ExistenumericUpDown;
+        private System.Windows.Forms.NumericUpDown CostoNumericUpDown;
+        private System.Windows.Forms.NumericUpDown ValorInventarioNumericUpDown;
+        private System.Windows.Forms.TextBox DescripcionTextBox;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }
 
