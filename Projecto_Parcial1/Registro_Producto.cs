@@ -86,7 +86,7 @@ namespace Projecto_Parcial1
             DescripcionTextBox.Text = producto.Descripcion;
             ExistenumericUpDown.Value = producto.Existen;
             CostoNumericUpDown.Value = producto.Costo;
-            Valor_inventarioLabel.Text = Convert.ToString(producto.Existen * producto.Costo);
+           // Valor_inventarioLabel.Text = Convert.ToString(producto.Existen * producto.Costo);
            
         }
 

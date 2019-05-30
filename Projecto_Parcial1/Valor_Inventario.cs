@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projecto_Parcial1.BLL;
+using Projecto_Parcial1.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +18,52 @@ namespace Projecto_Parcial1
         {
             InitializeComponent();
         }
+
+       
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            
+
+
+            Mostrar();
+        }
+
+
+
+        private void Mostrar()
+        {
+           
+            int r = 0;
+
+
+            for (int i = 1; i < 1000; i++)
+            {
+                Producto producto = new Producto();
+              
+
+                producto = ProductoBLL.Buscar(i);
+
+            
+
+                if (producto != null)
+                {
+                    r += (producto.Existen * producto.Costo);
+                }
+                else
+                {
+                    break;
+                }
+
+            }
+
+
+            ValorInventarioLabel.Text = Convert.ToString(r);
+
+
+
+        }
+
+
     }
 }
