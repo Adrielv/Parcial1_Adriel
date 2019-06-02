@@ -34,7 +34,7 @@ namespace Projecto_Parcial1
         private void Mostrar()
         {
            
-            int r = 0;
+            int r = 0; //do why
 
 
             for (int i = 1; i < 1000; i++)

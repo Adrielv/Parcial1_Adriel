@@ -59,7 +59,7 @@
             // productoToolStripMenuItem
             // 
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.productoToolStripMenuItem.Text = "Producto";
             this.productoToolStripMenuItem.Click += new System.EventHandler(this.ProductoToolStripMenuItem_Click);
             // 
@@ -74,7 +74,7 @@
             // valorInventarioToolStripMenuItem
             // 
             this.valorInventarioToolStripMenuItem.Name = "valorInventarioToolStripMenuItem";
-            this.valorInventarioToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.valorInventarioToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
             this.valorInventarioToolStripMenuItem.Text = "Valor_Inventario";
             this.valorInventarioToolStripMenuItem.Click += new System.EventHandler(this.ValorInventarioToolStripMenuItem_Click);
             // 
@@ -84,6 +84,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Text = "Main";

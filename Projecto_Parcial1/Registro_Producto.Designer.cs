@@ -43,7 +43,7 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Valor_inventarioLabel = new System.Windows.Forms.Label();
+            this.ValorInventarioTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoIdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistenumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
@@ -190,20 +190,19 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
-            // Valor_inventarioLabel
+            // ValorInventarioTextBox
             // 
-            this.Valor_inventarioLabel.AutoSize = true;
-            this.Valor_inventarioLabel.Location = new System.Drawing.Point(154, 188);
-            this.Valor_inventarioLabel.Name = "Valor_inventarioLabel";
-            this.Valor_inventarioLabel.Size = new System.Drawing.Size(0, 17);
-            this.Valor_inventarioLabel.TabIndex = 15;
+            this.ValorInventarioTextBox.Location = new System.Drawing.Point(157, 188);
+            this.ValorInventarioTextBox.Name = "ValorInventarioTextBox";
+            this.ValorInventarioTextBox.Size = new System.Drawing.Size(120, 22);
+            this.ValorInventarioTextBox.TabIndex = 15;
             // 
-            // MainForm
+            // Registro_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 324);
-            this.Controls.Add(this.Valor_inventarioLabel);
+            this.Controls.Add(this.ValorInventarioTextBox);
             this.Controls.Add(this.DescripcionTextBox);
             this.Controls.Add(this.CostoNumericUpDown);
             this.Controls.Add(this.ExistenumericUpDown);
@@ -217,7 +216,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "MainForm";
+            this.Name = "Registro_Producto";
             this.Text = "Registro de Producto";
             ((System.ComponentModel.ISupportInitialize)(this.ProductoIdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExistenumericUpDown)).EndInit();
@@ -244,7 +243,7 @@
         private System.Windows.Forms.NumericUpDown CostoNumericUpDown;
         private System.Windows.Forms.TextBox DescripcionTextBox;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
-        private System.Windows.Forms.Label Valor_inventarioLabel;
+        private System.Windows.Forms.TextBox ValorInventarioTextBox;
     }
 }
 

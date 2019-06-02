@@ -18,8 +18,7 @@ namespace Projecto_Parcial1
         public Registro_Producto()
         {
             
-  
-
+ 
             InitializeComponent();
         }
 
@@ -34,7 +33,7 @@ namespace Projecto_Parcial1
             DescripcionTextBox.Text = string.Empty;
             ExistenumericUpDown.Value = 0;
             CostoNumericUpDown.Value = 0;
-            Valor_inventarioLabel.Text = string.Empty;
+            ValorInventarioTextBox.Text = string.Empty;
 
         }
 
@@ -68,13 +67,14 @@ namespace Projecto_Parcial1
 
         private Producto LlenarClase()
         {
+
             Producto producto = new Producto();
             producto.ProductoId = Convert.ToInt32(ProductoIdNumericUpDown.Value);
             producto.Descripcion = DescripcionTextBox.Text;
             producto.Existen = Convert.ToInt32(ExistenumericUpDown.Value);
             producto.Costo = Convert.ToInt32(CostoNumericUpDown.Value);
-            producto.Valor_Inventario = (Convert.ToInt32(ExistenumericUpDown.Value) * Convert.ToInt32(CostoNumericUpDown.Value));
-
+           // producto.Valor_Inventario = Convert.ToInt32(ValorInventarioTextBox.Text);
+            
 
 
             return producto;
@@ -86,7 +86,7 @@ namespace Projecto_Parcial1
             DescripcionTextBox.Text = producto.Descripcion;
             ExistenumericUpDown.Value = producto.Existen;
             CostoNumericUpDown.Value = producto.Costo;
-           // Valor_inventarioLabel.Text = Convert.ToString(producto.Existen * producto.Costo);
+            ValorInventarioTextBox.Text = Convert.ToString(producto.Existen * producto.Costo);
            
         }
 
@@ -167,7 +167,7 @@ namespace Projecto_Parcial1
             n1 = Convert.ToInt32(ExistenumericUpDown.Text);
             n2 = Convert.ToInt32(CostoNumericUpDown.Text);
             r = n1 * n2;
-            Valor_inventarioLabel.Text = r.ToString(); 
+            ValorInventarioTextBox.Text = r.ToString(); 
         }
     }
 }
