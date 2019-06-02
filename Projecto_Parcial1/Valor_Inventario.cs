@@ -34,7 +34,7 @@ namespace Projecto_Parcial1
         private void Mostrar()
         {
            
-            int r = 0; //do why
+            int r = 0; //do while
 
 
             for (int i = 1; i < 1000; i++)
@@ -48,7 +48,7 @@ namespace Projecto_Parcial1
 
                 if (producto != null)
                 {
-             //       r += (producto.Existen * producto.Costo);
+                    r += Convert.ToInt32(producto.Existen * producto.Costo);
                 }
                 else
                 {
