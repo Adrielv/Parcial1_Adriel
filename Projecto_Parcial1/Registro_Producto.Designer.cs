@@ -177,6 +177,7 @@
             this.CostoTextBox.Name = "CostoTextBox";
             this.CostoTextBox.Size = new System.Drawing.Size(120, 22);
             this.CostoTextBox.TabIndex = 16;
+            this.CostoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CostoTextBox_KeyPress);
             // 
             // ExitenTextBox
             // 

@@ -183,5 +183,17 @@ namespace Projecto_Parcial1
                 return;
             }
         }
+
+        private void CostoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '.'))
+            {
+                MyErrorProvider.SetError(CostoTextBox, "El campo Costo no acepta nada que no sea numeros");
+                DescripcionTextBox.Focus();
+                e.Handled = true;
+
+                return;
+            }
+        }
     }
 }
