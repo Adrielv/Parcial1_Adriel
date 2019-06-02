@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ProductoBLL.cs" />
+    <Compile Include="BLL\ValorInventarioBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="DAL\ContextoV.cs" />
     <Compile Include="Entidades\Producto.cs" />
