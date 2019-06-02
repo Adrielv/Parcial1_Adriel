@@ -73,7 +73,7 @@ namespace Projecto_Parcial1
             producto.Descripcion = DescripcionTextBox.Text;
             producto.Existen = Convert.ToInt32(ExitenTextBox.Text);
             producto.Costo = Convert.ToSingle(CostoTextBox.Text);
-            producto.Valor_Inventario = Convert.ToSingle(ValorInventarioTextBox.Text);
+           // producto.Valor_Inventario = Convert.ToSingle(ValorInventarioTextBox.Text);
             
 
 
@@ -86,7 +86,7 @@ namespace Projecto_Parcial1
             DescripcionTextBox.Text = producto.Descripcion;
             ExitenTextBox.Text = producto.Existen.ToString();
             CostoTextBox.Text = producto.Costo.ToString();
-            ValorInventarioTextBox.Text = producto.Valor_Inventario.ToString();
+          //  ValorInventarioTextBox.Text = producto.Valor_Inventario.ToString();
            
         }
 

@@ -1,8 +1,8 @@
 
 
-create database Projecto_Parcial2Db
+create database Parcial1_Adriel
 go
-use Projecto_Parcial2Db
+use Parcial1_Adriel
 
 create table Parcial
 (
@@ -12,6 +12,12 @@ create table Parcial
 	Costo float,
 	Valor_Inventario float
 	
+);
+
+create table Parcial1
+(
+	Id int primary key identity,
+	Valor_Inventario float
 );
 
 

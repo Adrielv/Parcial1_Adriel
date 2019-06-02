@@ -55,7 +55,9 @@
   <ItemGroup>
     <Compile Include="BLL\ProductoBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="DAL\ContextoV.cs" />
     <Compile Include="Entidades\Producto.cs" />
+    <Compile Include="Entidades\Valor_Inventario.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,7 +124,7 @@
     <None Include="Resources\save_as.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\Scrips\Projecto_Parcial2_Query.sql" />
+    <Content Include="DAL\Scrips\Parcial1_Adriel_Query.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
