@@ -147,11 +147,28 @@ namespace Projecto_Parcial1
 
         }
 
+        private bool ValidarEliminar()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
+            if(ProductoIdNumericUpDown.Value == 0)
+            {
+                MyErrorProvider.SetError(ProductoIdNumericUpDown, "Debe de introducir un ProductoId");
+                ProductoIdNumericUpDown.Focus();
+                paso = false;
+            }
+            return paso;
+        }
+
         private void EliminarButton_Click(object sender, EventArgs e)
         {
             MyErrorProvider.Clear();
             int id;
             int.TryParse(ProductoIdNumericUpDown.Text, out id);
+
+            if (!ValidarEliminar())
+                return;
 
             Limpiar();
             if (ProductoBLL.Eliminar(id))
@@ -160,15 +177,7 @@ namespace Projecto_Parcial1
                 MyErrorProvider.SetError(ProductoIdNumericUpDown, "No se puede eliminar una persona que no existe");
         }
 
-        private void CostoNumericUpDown_Leave(object sender, EventArgs e)
-        {
-            int n1, n2, r;
-            
-           // n1 = Convert.ToInt32(ExistenumericUpDown.Text);
-          //  n2 = Convert.ToInt32(CostoNumericUpDown.Text);
-           // r = n1 * n2;
-           // ValorInventarioTextBox.Text = r.ToString(); 
-        }
+
 
         private void ExitenTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
