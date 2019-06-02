@@ -195,5 +195,37 @@ namespace Projecto_Parcial1
                 return;
             }
         }
+
+        private void ExitenTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+            if (CostoTextBox.Text.Length > 0 && ExitenTextBox.Text.Length > 0)
+                ValorInventarioTextBox.Text = Convert.ToString(Convert.ToSingle(CostoTextBox.Text) * Convert.ToInt32(ExitenTextBox.Text));
+
+            if (CostoTextBox.Text.Length > 0 && ExitenTextBox.Text.Length == 0)
+                ValorInventarioTextBox.Text = "0.0";
+
+            if (CostoTextBox.Text.Length == 0 && ExitenTextBox.Text.Length > 0)
+                ValorInventarioTextBox.Text = "0.0";
+
+            if (CostoTextBox.Text.Length == 0 && ExitenTextBox.Text.Length == 0)
+                ValorInventarioTextBox.Text = "0.0";
+        }
+
+        private void CostoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (CostoTextBox.Text.Length > 0 && ExitenTextBox.Text.Length > 0)
+                ValorInventarioTextBox.Text = Convert.ToString(Convert.ToSingle(CostoTextBox.Text) * Convert.ToInt32(ExitenTextBox.Text));
+
+            if (CostoTextBox.Text.Length > 0 && ExitenTextBox.Text.Length == 0)
+                ValorInventarioTextBox.Text = "0.0";
+
+            if (CostoTextBox.Text.Length == 0 && ExitenTextBox.Text.Length > 0)
+                ValorInventarioTextBox.Text = "0.0";
+
+            if (CostoTextBox.Text.Length == 0 && ExitenTextBox.Text.Length == 0)
+                ValorInventarioTextBox.Text = "0.0";
+
+        }
     }
 }

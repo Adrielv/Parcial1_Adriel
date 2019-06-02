@@ -177,6 +177,7 @@
             this.CostoTextBox.Name = "CostoTextBox";
             this.CostoTextBox.Size = new System.Drawing.Size(120, 22);
             this.CostoTextBox.TabIndex = 16;
+            this.CostoTextBox.TextChanged += new System.EventHandler(this.CostoTextBox_TextChanged);
             this.CostoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CostoTextBox_KeyPress);
             // 
             // ExitenTextBox
@@ -185,6 +186,7 @@
             this.ExitenTextBox.Name = "ExitenTextBox";
             this.ExitenTextBox.Size = new System.Drawing.Size(120, 22);
             this.ExitenTextBox.TabIndex = 17;
+            this.ExitenTextBox.TextChanged += new System.EventHandler(this.ExitenTextBox_TextChanged);
             this.ExitenTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ExitenTextBox_KeyPress);
             // 
             // Registro_Producto
