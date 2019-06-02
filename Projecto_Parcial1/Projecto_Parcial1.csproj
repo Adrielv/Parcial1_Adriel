@@ -122,7 +122,7 @@
     <None Include="Resources\save_as.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\Scrips\Projecto_Parcial_Query.sql" />
+    <Content Include="DAL\Scrips\Projecto_Parcial2_Query.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

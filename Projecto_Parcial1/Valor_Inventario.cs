@@ -48,7 +48,7 @@ namespace Projecto_Parcial1
 
                 if (producto != null)
                 {
-                    r += (producto.Existen * producto.Costo);
+             //       r += (producto.Existen * producto.Costo);
                 }
                 else
                 {

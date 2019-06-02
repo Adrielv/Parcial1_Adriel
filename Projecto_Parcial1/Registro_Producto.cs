@@ -31,8 +31,8 @@ namespace Projecto_Parcial1
         {
             ProductoIdNumericUpDown.Value = 0;
             DescripcionTextBox.Text = string.Empty;
-            ExistenumericUpDown.Value = 0;
-            CostoNumericUpDown.Value = 0;
+            ExitenTextBox.Text = string.Empty;
+            CostoTextBox.Text = string.Empty;
             ValorInventarioTextBox.Text = string.Empty;
 
         }
@@ -71,9 +71,9 @@ namespace Projecto_Parcial1
             Producto producto = new Producto();
             producto.ProductoId = Convert.ToInt32(ProductoIdNumericUpDown.Value);
             producto.Descripcion = DescripcionTextBox.Text;
-            producto.Existen = Convert.ToInt32(ExistenumericUpDown.Value);
-            producto.Costo = Convert.ToInt32(CostoNumericUpDown.Value);
-           // producto.Valor_Inventario = Convert.ToInt32(ValorInventarioTextBox.Text);
+            producto.Existen = Convert.ToInt32(ExitenTextBox.Text);
+            producto.Costo = Convert.ToSingle(CostoTextBox.Text);
+            producto.Valor_Inventario = Convert.ToSingle(ValorInventarioTextBox.Text);
             
 
 
@@ -84,9 +84,9 @@ namespace Projecto_Parcial1
         {
             ProductoIdNumericUpDown.Value = producto.ProductoId;
             DescripcionTextBox.Text = producto.Descripcion;
-            ExistenumericUpDown.Value = producto.Existen;
-            CostoNumericUpDown.Value = producto.Costo;
-            ValorInventarioTextBox.Text = Convert.ToString(producto.Existen * producto.Costo);
+            ExitenTextBox.Text = producto.Existen.ToString();
+            CostoTextBox.Text = producto.Costo.ToString();
+            ValorInventarioTextBox.Text = producto.Valor_Inventario.ToString();
            
         }
 
@@ -101,18 +101,18 @@ namespace Projecto_Parcial1
                 DescripcionTextBox.Focus();
                 paso = false;
             }
-            if(ExistenumericUpDown.Value <= 0)
+            if(ExitenTextBox.Text == string.Empty)
             {
 
-                MyErrorProvider.SetError(ExistenumericUpDown, "El campo Existen no puede ser negativo o igual a 0");
-                DescripcionTextBox.Focus();
+                MyErrorProvider.SetError(ExitenTextBox, "El campo Existen no puede estar vacio");
+               ExitenTextBox.Focus();
                 paso = false;
             }
-            if(CostoNumericUpDown.Value <= 0)
+            if(CostoTextBox.Text == string.Empty)
             {
 
-                MyErrorProvider.SetError(CostoNumericUpDown, "El campo Costo no puede ser negativo o igual a 0");
-                DescripcionTextBox.Focus();
+                MyErrorProvider.SetError(CostoTextBox, "El campo Costo no puede estar vacio");
+                CostoTextBox.Focus();
                 paso = false;
             }
             return paso;
@@ -164,10 +164,15 @@ namespace Projecto_Parcial1
         {
             int n1, n2, r;
             
-            n1 = Convert.ToInt32(ExistenumericUpDown.Text);
-            n2 = Convert.ToInt32(CostoNumericUpDown.Text);
-            r = n1 * n2;
-            ValorInventarioTextBox.Text = r.ToString(); 
+           // n1 = Convert.ToInt32(ExistenumericUpDown.Text);
+          //  n2 = Convert.ToInt32(CostoNumericUpDown.Text);
+           // r = n1 * n2;
+           // ValorInventarioTextBox.Text = r.ToString(); 
+        }
+
+        private void ExitenTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }
