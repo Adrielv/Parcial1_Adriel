@@ -172,7 +172,16 @@ namespace Projecto_Parcial1
 
         private void ExitenTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+           
+         
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MyErrorProvider.SetError(ExitenTextBox, "El campo Existencia no acepta nada que no sea numeros");
+                DescripcionTextBox.Focus();
+                e.Handled = true;
+               
+                return;
+            }
         }
     }
 }
