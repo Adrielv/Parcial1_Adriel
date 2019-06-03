@@ -1,6 +1,6 @@
 ﻿namespace Projecto_Parcial1
 {
-    partial class Main
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -78,7 +78,7 @@
             this.valorInventarioToolStripMenuItem.Text = "Valor_Inventario";
             this.valorInventarioToolStripMenuItem.Click += new System.EventHandler(this.ValorInventarioToolStripMenuItem_Click);
             // 
-            // Main
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -86,8 +86,8 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Main";
-            this.Text = "Main";
+            this.Name = "MainForm";
+            this.Text = "MainForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

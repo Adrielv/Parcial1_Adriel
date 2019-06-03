@@ -16,7 +16,7 @@ namespace Projecto_Parcial1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new MainForm());
         }
     }
 }

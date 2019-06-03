@@ -13,9 +13,9 @@ using Projecto_Parcial1.Entidades;
 
 namespace Projecto_Parcial1
 {
-    public partial class Registro_Producto : Form
+    public partial class rProducto : Form
     {
-        public Registro_Producto()
+        public rProducto()
         {
           
             InitializeComponent();
@@ -96,7 +96,7 @@ namespace Projecto_Parcial1
             DescripcionTextBox.Text = producto.Descripcion;
             ExitenTextBox.Text = producto.Existen.ToString();
             CostoTextBox.Text = producto.Costo.ToString();
-          //  CostoTextBox.Text = valor.Valor_Inventario.ToString();
+          
 
 
         }

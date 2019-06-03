@@ -1,6 +1,6 @@
 ﻿namespace Projecto_Parcial1
 {
-    partial class Registro_Producto
+    partial class rProducto
     {
         /// <summary>
         /// Required designer variable.

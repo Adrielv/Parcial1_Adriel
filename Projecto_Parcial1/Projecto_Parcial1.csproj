@@ -58,31 +58,31 @@
     <Compile Include="DAL\pContexto\Contexto.cs" />
     <Compile Include="Entidades\Producto\Producto.cs" />
     <Compile Include="Entidades\ValorInventario\ValorInventario.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registro_Producto.cs">
+    <Compile Include="UI\Registro\rProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro_Producto.Designer.cs">
-      <DependentUpon>Registro_Producto.cs</DependentUpon>
+    <Compile Include="UI\Registro\rProducto.Designer.cs">
+      <DependentUpon>rProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Valor_Inventario.cs">
+    <Compile Include="UI\Consultas\rValor_Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Valor_Inventario.Designer.cs">
-      <DependentUpon>Valor_Inventario.cs</DependentUpon>
+    <Compile Include="UI\Consultas\rValor_Inventario.Designer.cs">
+      <DependentUpon>rValor_Inventario.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro_Producto.resx">
-      <DependentUpon>Registro_Producto.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registro\rProducto.resx">
+      <DependentUpon>rProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,8 +94,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Valor_Inventario.resx">
-      <DependentUpon>Valor_Inventario.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Consultas\rValor_Inventario.resx">
+      <DependentUpon>rValor_Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -112,8 +112,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UI\Consultas\" />
-    <Folder Include="UI\Registro\" />
     <Folder Include="UI\Reportes\" />
   </ItemGroup>
   <ItemGroup>

@@ -12,37 +12,19 @@ using System.Windows.Forms;
 
 namespace Projecto_Parcial1
 {
-    public partial class Valor_Inventario : Form
+    public partial class rValor_Inventario : Form
     {
-        public Valor_Inventario()
+        public rValor_Inventario()
         {
             InitializeComponent();
         }
 
-
-        float r;
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-           ValorInventario valorInventario = new ValorInventario();
-
+            ValorInventario inventario = ValorInventarioBLL.Buscar(1);
             double total;
-            total = valorInventario.Valor_Inventario;
+            total = inventario.Valor_Inventario;
             ValorInventarioLabel.Text = total.ToString();
-
-    
-
-
-            /*  r = 0.0f;
-
-             r =  BuscarValor();
-              GuardarValor();
-             // LlenarCampo2();*/
-            // ValorInventarioLabel.Text = Convert.ToString(valorInventario.Valor_Inventario);
-
-            //  Mostrar();
         }
-        
-
-
     }
 }

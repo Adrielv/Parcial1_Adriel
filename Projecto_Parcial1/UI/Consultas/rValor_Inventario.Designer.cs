@@ -1,6 +1,6 @@
 ﻿namespace Projecto_Parcial1
 {
-    partial class Valor_Inventario
+    partial class rValor_Inventario
     {
         /// <summary>
         /// Required designer variable.
@@ -61,7 +61,7 @@
             this.RefreshButton.UseVisualStyleBackColor = true;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
-            // Valor_Inventario
+            // rValor_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,8 +69,8 @@
             this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.ValorInventarioLabel);
             this.Controls.Add(this.label1);
-            this.Name = "Valor_Inventario";
-            this.Text = "Valor_Inventario";
+            this.Name = "rValor_Inventario";
+            this.Text = "Valor Inventario";
             this.ResumeLayout(false);
             this.PerformLayout();
 

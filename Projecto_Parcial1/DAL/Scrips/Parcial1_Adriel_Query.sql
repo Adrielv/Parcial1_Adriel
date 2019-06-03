@@ -22,6 +22,6 @@ create table Parcial1
  SET IDENTITY_INSERT ValorInventarios ON
  insert into ValorInventarios(Id,Valor_Inventario) values('1','0');
 
- delete from ValorInventarios where id = 2
+ delete from ValorInventarios where Id = 1
 
 select * from ValorInventarios

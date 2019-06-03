@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace Projecto_Parcial1
 {
-    public partial class Main : Form
+    public partial class MainForm : Form
     {
-        public Main()
+        public MainForm()
         {
             InitializeComponent();
         }
 
         private void ProductoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Registro_Producto rp = new Registro_Producto();
+            rProducto rp = new rProducto();
             rp.Show();
         }
 
         private void ValorInventarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Valor_Inventario vi = new Valor_Inventario();
+            rValor_Inventario vi = new rValor_Inventario();
             vi.Show();
         }
     }

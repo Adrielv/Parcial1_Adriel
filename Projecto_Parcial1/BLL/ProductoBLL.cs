@@ -48,7 +48,7 @@ namespace Projecto_Parcial1.BLL
                 float res = producto.Valor_Inventario - producto1.Valor_Inventario;
 
                 ValorInventario Valorinventario = ValorInventarioBLL.Buscar(1);
-                Valorinventario.Valor_Inventario += producto.Valor_Inventario;
+                Valorinventario.Valor_Inventario += res;
                 ValorInventarioBLL.Modificar(Valorinventario);
 
 
