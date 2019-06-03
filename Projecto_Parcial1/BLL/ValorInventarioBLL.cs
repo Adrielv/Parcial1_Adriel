@@ -15,22 +15,22 @@ namespace Projecto_Parcial1.BLL
         public static bool Guardar(ValorInventario valorInventario)
         {
             bool paso = false;
-            Contexto db = new Contexto();
+
+            Contexto contexto = new Contexto();
             try
             {
-                if (db.ValorInventario.Add(valorInventario) != null)
-                    paso = db.SaveChanges() > 0;
+                if (contexto.ValorInventario.Add(valorInventario) != null)
+                {
+                    paso = contexto.SaveChanges() > 0;
+
+                }
+                contexto.Dispose();
             }
             catch (Exception)
             {
                 throw;
             }
-            finally
-            {
-                db.Dispose();
-            }
             return paso;
-
         }
 
         public static ValorInventario Buscar(int id)
@@ -42,7 +42,7 @@ namespace Projecto_Parcial1.BLL
             {
                 valor = db.ValorInventario.Find(id);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
@@ -54,7 +54,7 @@ namespace Projecto_Parcial1.BLL
 
         }
 
-       public static bool Modificar(ValorInventario Valorinventario)
+        public static bool Modificar(ValorInventario Valorinventario)
         {
             bool paso = false;
 
@@ -74,6 +74,6 @@ namespace Projecto_Parcial1.BLL
         }
 
 
-   
+
     }
 }

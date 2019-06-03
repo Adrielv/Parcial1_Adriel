@@ -19,3 +19,4 @@ create table Parcial1
 	Valor_Inventario float
 );
 
+select * from Parcial1

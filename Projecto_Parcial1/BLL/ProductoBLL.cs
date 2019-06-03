@@ -25,9 +25,9 @@ namespace Projecto_Parcial1.BLL
                 Valorinventario.Valor_Inventario += producto.Valor_Inventario;
                 ValorInventarioBLL.Modificar(Valorinventario);
             }
-            catch(Exception)
-            {  
-                throw;        
+            catch (Exception)
+            {
+                throw;
             }
             finally
             {
@@ -84,7 +84,7 @@ namespace Projecto_Parcial1.BLL
 
                 paso = (db.SaveChanges() > 0);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
@@ -105,7 +105,7 @@ namespace Projecto_Parcial1.BLL
                 producto = db.Producto.Find(id);
 
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
@@ -125,7 +125,7 @@ namespace Projecto_Parcial1.BLL
             {
                 Lista = db.Producto.Where(producto).ToList();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }

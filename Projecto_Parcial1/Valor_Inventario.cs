@@ -24,104 +24,24 @@ namespace Projecto_Parcial1
         private void RefreshButton_Click(object sender, EventArgs e)
         {
            ValorInventario valorInventario = new ValorInventario();
-          /*  r = 0.0f;
 
-           r =  BuscarValor();
-            GuardarValor();
-           // LlenarCampo2();*/
-            ValorInventarioLabel.Text = Convert.ToString(valorInventario.Valor_Inventario);
+            double total;
+            total = valorInventario.Valor_Inventario;
+            ValorInventarioLabel.Text = total.ToString();
 
-          //  Mostrar();
+    
+
+
+            /*  r = 0.0f;
+
+             r =  BuscarValor();
+              GuardarValor();
+             // LlenarCampo2();*/
+            // ValorInventarioLabel.Text = Convert.ToString(valorInventario.Valor_Inventario);
+
+            //  Mostrar();
         }
-        private void LlenarCampo2(ValorInventario valorInventario)
-        {
-            ValorInventarioLabel.Text = Convert.ToString(valorInventario.Valor_Inventario);
-        }
-        private void GuardarValor()
-        {
-            ValorInventario valorInventario;
-
-            valorInventario = LlenarClase2();
-            ValorInventarioBLL.Guardar(valorInventario);
-
-       
-        }
-
-
-
-        private ValorInventario LlenarClase2()
-        {
-
-            ValorInventario valorInventario = new ValorInventario();
-
-            valorInventario.Id = 1;
-            valorInventario.Valor_Inventario = r;
-
-            return valorInventario;
-        }
-
-        private float BuscarValor()
-        {
-            float r;
-            r = 0.0f;
-
-            Producto producto = new Producto();
-
         
-
-            for (int i = 1; i < 1000; i++)
-            {
-                producto = ProductoBLL.Buscar(i);
-
-                if (producto != null)
-                {
-                    r += (producto.Existen * producto.Costo);
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-
-            return r;
-        }
-
-
-        private void Mostrar()
-        {
-           
-            int r = 0; //do while
-
-
-            for (int i = 1; i < 1000; i++)
-            {
-                Producto producto = new Producto();
-                ValorInventario valor = new ValorInventario();
-              
-
-                producto = ProductoBLL.Buscar(i);
-                valor = ValorInventarioBLL.Buscar(i);
-
-            
-
-                if (producto != null)
-                {
-                    r += (valor.Id);
-                }
-                else
-                {
-                    break;
-                }
-
-            }
-
-
-            ValorInventarioLabel.Text = Convert.ToString(r);
-
-
-
-        }
 
 
     }
