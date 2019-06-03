@@ -189,7 +189,7 @@
             this.ExitenTextBox.TextChanged += new System.EventHandler(this.ExitenTextBox_TextChanged);
             this.ExitenTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ExitenTextBox_KeyPress);
             // 
-            // Registro_Producto
+            // rProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -208,7 +208,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Registro_Producto";
+            this.Name = "rProducto";
             this.Text = "Registro de Producto";
             ((System.ComponentModel.ISupportInitialize)(this.ProductoIdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();

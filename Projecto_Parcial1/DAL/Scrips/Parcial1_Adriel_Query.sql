@@ -25,3 +25,4 @@ create table Parcial1
  delete from ValorInventarios where Id = 1
 
 select * from ValorInventarios
+select * from Productoes

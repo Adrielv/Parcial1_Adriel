@@ -29,7 +29,7 @@ namespace Projecto_Parcial1
         private void Limpiar()
         {
             ProductoIdNumericUpDown.Value = 0;
-            DescripcionTextBox.Text = string.Empty;
+            DescripcionTextBox.Text = string.Empty;  
             ExitenTextBox.Text = string.Empty;
             CostoTextBox.Text = string.Empty;
             ValorInventarioTextBox.Text = string.Empty;
@@ -186,34 +186,52 @@ namespace Projecto_Parcial1
                 MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MyErrorProvider.SetError(ProductoIdNumericUpDown, "No se puede eliminar una persona que no existe");
+
+            Limpiar();
         }
 
 
 
         private void ExitenTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
-         
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            char ch = e.KeyChar;
+
+            if (e.KeyChar == '.')
             {
-                MyErrorProvider.SetError(ExitenTextBox, "El campo Existencia no acepta nada que no sea numeros");
-                DescripcionTextBox.Focus();
-                e.Handled = true;
-               
-                return;
+                if (ExitenTextBox.TextLength < 1)
+                    e.Handled = true;
             }
+
+            if (ch == 46 && ExitenTextBox.Text.IndexOf('.') != -1)
+                e.Handled = true;
+
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+            return;
         }
 
         private void CostoTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != '.'))
+
+            char ch = e.KeyChar;
+
+            if (e.KeyChar == '.')
             {
-                MyErrorProvider.SetError(CostoTextBox, "El campo Costo no acepta nada que no sea numeros");
-                DescripcionTextBox.Focus();
+                if (ExitenTextBox.TextLength < 1)
+                    e.Handled = true;
+            }
+
+            if (ch == 46 && ExitenTextBox.Text.IndexOf('.') != -1)
                 e.Handled = true;
 
-                return;
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
             }
+            return;
+
         }
 
         private void ExitenTextBox_TextChanged(object sender, EventArgs e)
@@ -247,5 +265,7 @@ namespace Projecto_Parcial1
                 ValorInventarioTextBox.Text = "0.0";
 
         }
+
+     
     }
 }
