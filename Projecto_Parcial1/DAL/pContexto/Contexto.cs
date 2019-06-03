@@ -8,12 +8,15 @@ using Projecto_Parcial1.Entidades;
 
 namespace Projecto_Parcial1.DAL
 {
-    class ContextoV : DbContext
+    public class Contexto : DbContext 
     {
+        public DbSet<Producto> Producto { get; set; }
         public DbSet<ValorInventario> ValorInventario { get; set; }
 
 
-        public ContextoV() : base("ConStr")
+        public Contexto() : base("ConStr")
         { }
+
+
     }
 }

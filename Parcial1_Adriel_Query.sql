@@ -1,5 +1,4 @@
 
-
 create database Parcial1_Adriel
 go
 use Parcial1_Adriel
@@ -19,6 +18,4 @@ create table Parcial1
 	Id int primary key identity,
 	Valor_Inventario float
 );
-
-
 

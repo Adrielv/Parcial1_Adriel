@@ -20,10 +20,14 @@ namespace Projecto_Parcial1.BLL
             {
                 if (db.Producto.Add(producto) != null)
                     paso = db.SaveChanges() > 0;
+
+                ValorInventario Valorinventario = ValorInventarioBLL.Buscar(1);
+                Valorinventario.Valor_Inventario += producto.Valor_Inventario;
+                ValorInventarioBLL.Modificar(Valorinventario);
             }
             catch(Exception)
-            {
-                throw;
+            {  
+                throw;        
             }
             finally
             {
@@ -38,8 +42,16 @@ namespace Projecto_Parcial1.BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
+            Producto producto1 = ProductoBLL.Buscar(producto.ProductoId);
             try
             {
+                float res = producto.Valor_Inventario - producto1.Valor_Inventario;
+
+                ValorInventario Valorinventario = ValorInventarioBLL.Buscar(1);
+                Valorinventario.Valor_Inventario += producto.Valor_Inventario;
+                ValorInventarioBLL.Modificar(Valorinventario);
+
+
                 db.Entry(producto).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);
             }
@@ -53,6 +65,7 @@ namespace Projecto_Parcial1.BLL
             }
             return paso;
         }
+
         public static bool Eliminar(int id)
         {
             bool paso;
@@ -61,6 +74,12 @@ namespace Projecto_Parcial1.BLL
             try
             {
                 var eliminar = db.Producto.Find(id);
+
+                var ValorInventario = ValorInventarioBLL.Buscar(1);
+                ValorInventario.Valor_Inventario -= eliminar.Valor_Inventario;
+                ValorInventarioBLL.Modificar(ValorInventario);
+
+
                 db.Entry(eliminar).State = EntityState.Deleted;
 
                 paso = (db.SaveChanges() > 0);

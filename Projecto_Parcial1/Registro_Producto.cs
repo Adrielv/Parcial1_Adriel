@@ -17,8 +17,7 @@ namespace Projecto_Parcial1
     {
         public Registro_Producto()
         {
-            
- 
+          
             InitializeComponent();
         }
 
@@ -41,16 +40,22 @@ namespace Projecto_Parcial1
         {
             Producto producto;
             bool paso;
+    
+
 
             if (!Validar())
                 return;
             producto = LlenarClase();
+          
 
             if (ProductoIdNumericUpDown.Value == 0)
+            {
                 paso = ProductoBLL.Guardar(producto);
+             
+            }
             else
             {
-                if(!ExisteEnLaBaseDeDatos())
+                if (!ExisteEnLaBaseDeDatos())
                 {
                     MessageBox.Show("No se puede modificar una persona que no existe", "fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -65,16 +70,19 @@ namespace Projecto_Parcial1
 
         }
 
+      
+
         private Producto LlenarClase()
         {
-
+           
             Producto producto = new Producto();
             producto.ProductoId = Convert.ToInt32(ProductoIdNumericUpDown.Value);
             producto.Descripcion = DescripcionTextBox.Text;
             producto.Existen = Convert.ToInt32(ExitenTextBox.Text);
             producto.Costo = Convert.ToSingle(CostoTextBox.Text);
-           // producto.Valor_Inventario = Convert.ToSingle(ValorInventarioTextBox.Text);
-            
+            producto.Valor_Inventario = Convert.ToSingle(CostoTextBox.Text) * Convert.ToInt32(ExitenTextBox.Text);
+           
+
 
 
             return producto;
@@ -82,12 +90,15 @@ namespace Projecto_Parcial1
 
         private void LlenarCampo(Producto producto)
         {
+            ValorInventario valor = new ValorInventario();
+
             ProductoIdNumericUpDown.Value = producto.ProductoId;
             DescripcionTextBox.Text = producto.Descripcion;
             ExitenTextBox.Text = producto.Existen.ToString();
             CostoTextBox.Text = producto.Costo.ToString();
-          //  ValorInventarioTextBox.Text = producto.Valor_Inventario.ToString();
-           
+          //  CostoTextBox.Text = valor.Valor_Inventario.ToString();
+
+
         }
 
         private bool Validar()

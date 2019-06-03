@@ -15,7 +15,9 @@ namespace Projecto_Parcial1.Entidades
         public int Existen { get; set; }
         public float Costo { get; set; }
 
-    
+        public float Valor_Inventario { get; set; }
+
+
 
         public Producto()
         {
@@ -23,6 +25,7 @@ namespace Projecto_Parcial1.Entidades
             Descripcion = string.Empty;
             Existen = 0;
             Costo = 0.0f;
+            Valor_Inventario = 0.0f;
           
         }
 
