@@ -19,6 +19,17 @@ namespace Projecto_Parcial1
         {
           
             InitializeComponent();
+            LlenarCombo();
+        }
+
+        private void LlenarCombo()
+        {
+            var listado = new List<Ubicaciones>();
+
+            listado = UbicacionesBLL.GetList(p => true);
+            UbicacionesComboBox.DataSource = listado;
+            UbicacionesComboBox.DisplayMember = "Descripcion";
+            UbicacionesComboBox.ValueMember = "UbicacionId";
         }
 
         private void NuevoButton_Click(object sender, EventArgs e)

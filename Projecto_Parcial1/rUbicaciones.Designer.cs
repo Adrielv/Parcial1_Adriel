@@ -48,7 +48,7 @@
             this.DescripcionesTextBox.Name = "DescripcionesTextBox";
             this.DescripcionesTextBox.Size = new System.Drawing.Size(156, 22);
             this.DescripcionesTextBox.TabIndex = 0;
-            this.DescripcionesTextBox.Leave += new System.EventHandler(this.DescripcionesTextBox_Leave);
+          
             // 
             // IdNumericUpDown
             // 

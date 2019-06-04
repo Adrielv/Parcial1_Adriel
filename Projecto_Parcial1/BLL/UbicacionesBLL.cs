@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Projecto_Parcial1.Entidades;
 using Projecto_Parcial1.DAL;
 using System.Data.Entity;
+using System.Linq.Expressions;
 
 namespace Projecto_Parcial1.BLL
 {
@@ -78,15 +79,13 @@ namespace Projecto_Parcial1.BLL
 
         }
 
-        public static Ubicaciones Buscar2(string id)
+        public static List<Ubicaciones> GetList(Expression<Func<Ubicaciones, bool>> ubicaciones)
         {
+            List<Ubicaciones> Lista = new List<Ubicaciones>();
             Contexto db = new Contexto();
-            Ubicaciones ubicaciones = new Ubicaciones();
-
-
             try
             {
-                ubicaciones = db.Ubicaciones.Find(id);
+                Lista = db.Ubicaciones.Where(ubicaciones).ToList();
             }
             catch (Exception)
             {
@@ -96,8 +95,7 @@ namespace Projecto_Parcial1.BLL
             {
                 db.Dispose();
             }
-            return ubicaciones;
-
+            return Lista;
         }
 
         public static bool Modificar(Ubicaciones ubicaciones)
