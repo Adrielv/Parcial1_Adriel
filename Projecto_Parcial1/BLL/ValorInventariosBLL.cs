@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 
 namespace Projecto_Parcial1.BLL
 {
-    public class ValorInventarioBLL
+    public class ValorInventariosBLL
     {
         public static bool Guardar(ValorInventario valorInventario)
         {

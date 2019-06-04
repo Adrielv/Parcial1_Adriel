@@ -53,9 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\ProductoBLL.cs" />
+    <Compile Include="BLL\ProductosBLL.cs" />
     <Compile Include="BLL\UbicacionesBLL.cs" />
-    <Compile Include="BLL\ValorInventarioBLL.cs" />
+    <Compile Include="BLL\ValorInventariosBLL.cs" />
     <Compile Include="DAL\pContexto\Contexto.cs" />
     <Compile Include="Entidades\Producto\Producto.cs" />
     <Compile Include="Entidades\Ubicaciones.cs" />

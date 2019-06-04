@@ -21,7 +21,7 @@ namespace Projecto_Parcial1
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
-            ValorInventario inventario = ValorInventarioBLL.Buscar(1);
+            ValorInventario inventario = ValorInventariosBLL.Buscar(1);
             double total;
             total = inventario.Valor_Inventario;
             ValorInventarioLabel.Text = total.ToString();

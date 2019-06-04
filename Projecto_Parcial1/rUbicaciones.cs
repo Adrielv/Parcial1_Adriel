@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Projecto_Parcial1.BLL;
+using Projecto_Parcial1.DAL;
 using Projecto_Parcial1.Entidades;
 
 namespace Projecto_Parcial1
@@ -149,19 +150,24 @@ namespace Projecto_Parcial1
 
         }
 
-      /*  private bool ExisteEnLaBaseDeDatos2()
+       public static bool Existe(string descripcion)
         {
-            Ubicaciones ubicaciones = UbicacionesBLL.Buscar2(DescripcionesTextBox.Text);
-            return (ubicaciones != null);
+            bool paso = false;
+            Contexto db = new Contexto();
+            try
+            {
+
+            }catch(Exception)
+            {
+                throw;
+            }
+            return paso;
+          
         }
 
         private void DescripcionesTextBox_Leave(object sender, EventArgs e)
         {
-            if (!ExisteEnLaBaseDeDatos2())
-            {
-                MessageBox.Show("No se puede modificar una persona que no existe", "fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-        }*/
+           
+        }
     }
 }

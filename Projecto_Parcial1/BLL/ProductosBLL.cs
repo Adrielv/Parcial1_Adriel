@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 
 namespace Projecto_Parcial1.BLL
 {
-    public class ProductoBLL
+    public class ProductosBLL
     {
         public static bool Guardar(Producto producto)
         {
@@ -21,9 +21,9 @@ namespace Projecto_Parcial1.BLL
                 if (db.Producto.Add(producto) != null)
                     paso = db.SaveChanges() > 0;
 
-                ValorInventario Valorinventario = ValorInventarioBLL.Buscar(1);
+                ValorInventario Valorinventario = ValorInventariosBLL.Buscar(1);
                 Valorinventario.Valor_Inventario += producto.Valor_Inventario;
-                ValorInventarioBLL.Modificar(Valorinventario);
+                ValorInventariosBLL.Modificar(Valorinventario);
             }
             catch (Exception)
             {
@@ -42,14 +42,14 @@ namespace Projecto_Parcial1.BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
-            Producto producto1 = ProductoBLL.Buscar(producto.ProductoId);
+            Producto producto1 = ProductosBLL.Buscar(producto.ProductoId);
             try
             {
                 float res = producto.Valor_Inventario - producto1.Valor_Inventario;
 
-                ValorInventario Valorinventario = ValorInventarioBLL.Buscar(1);
+                ValorInventario Valorinventario = ValorInventariosBLL.Buscar(1);
                 Valorinventario.Valor_Inventario += res;
-                ValorInventarioBLL.Modificar(Valorinventario);
+                ValorInventariosBLL.Modificar(Valorinventario);
 
 
                 db.Entry(producto).State = EntityState.Modified;
@@ -75,9 +75,9 @@ namespace Projecto_Parcial1.BLL
             {
                 var eliminar = db.Producto.Find(id);
 
-                var ValorInventario = ValorInventarioBLL.Buscar(1);
+                var ValorInventario = ValorInventariosBLL.Buscar(1);
                 ValorInventario.Valor_Inventario -= eliminar.Valor_Inventario;
-                ValorInventarioBLL.Modificar(ValorInventario);
+                ValorInventariosBLL.Modificar(ValorInventario);
 
 
                 db.Entry(eliminar).State = EntityState.Deleted;

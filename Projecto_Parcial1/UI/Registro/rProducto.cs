@@ -61,7 +61,7 @@ namespace Projecto_Parcial1
 
             if (ProductoIdNumericUpDown.Value == 0)
             {
-                paso = ProductoBLL.Guardar(producto);
+                paso = ProductosBLL.Guardar(producto);
              
             }
             else
@@ -71,7 +71,7 @@ namespace Projecto_Parcial1
                     MessageBox.Show("No se puede modificar una persona que no existe", "fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                paso = ProductoBLL.Modificar(producto);
+                paso = ProductosBLL.Modificar(producto);
             }
 
             if (paso)
@@ -141,7 +141,7 @@ namespace Projecto_Parcial1
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            Producto producto = ProductoBLL.Buscar((int)ProductoIdNumericUpDown.Value);
+            Producto producto = ProductosBLL.Buscar((int)ProductoIdNumericUpDown.Value);
             return (producto != null);
         }
 
@@ -153,7 +153,7 @@ namespace Projecto_Parcial1
 
             Limpiar();
 
-            producto = ProductoBLL.Buscar(id);
+            producto = ProductosBLL.Buscar(id);
 
             if(producto != null)
             {
@@ -191,7 +191,7 @@ namespace Projecto_Parcial1
                 return;
 
             Limpiar();
-            if (ProductoBLL.Eliminar(id))
+            if (ProductosBLL.Eliminar(id))
                 MessageBox.Show("Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MyErrorProvider.SetError(ProductoIdNumericUpDown, "No se puede eliminar una persona que no existe");
