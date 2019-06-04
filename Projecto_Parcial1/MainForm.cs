@@ -28,5 +28,10 @@ namespace Projecto_Parcial1
             rValor_Inventario vi = new rValor_Inventario();
             vi.Show();
         }
+
+        private void RegistroProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

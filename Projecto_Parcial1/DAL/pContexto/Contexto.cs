@@ -13,6 +13,8 @@ namespace Projecto_Parcial1.DAL
         public DbSet<Producto> Producto { get; set; }
         public DbSet<ValorInventario> ValorInventario { get; set; }
 
+        public DbSet<Ubicaciones> Ubicaciones { get; set; }
+
 
         public Contexto() : base("ConStr")
         { }

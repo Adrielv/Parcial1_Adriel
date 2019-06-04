@@ -54,15 +54,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ProductoBLL.cs" />
+    <Compile Include="BLL\UbicacionesBLL.cs" />
     <Compile Include="BLL\ValorInventarioBLL.cs" />
     <Compile Include="DAL\pContexto\Contexto.cs" />
     <Compile Include="Entidades\Producto\Producto.cs" />
+    <Compile Include="Entidades\Ubicaciones.cs" />
     <Compile Include="Entidades\ValorInventario\ValorInventario.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rUbicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rUbicaciones.Designer.cs">
+      <DependentUpon>rUbicaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registro\rProducto.cs">
       <SubType>Form</SubType>
@@ -80,6 +88,9 @@
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rUbicaciones.resx">
+      <DependentUpon>rUbicaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registro\rProducto.resx">
       <DependentUpon>rProducto.cs</DependentUpon>
@@ -123,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scrips\Parcial1_Adriel_Query.sql" />
+    <None Include="Resources\add.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

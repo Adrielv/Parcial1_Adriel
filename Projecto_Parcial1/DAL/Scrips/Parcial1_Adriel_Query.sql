@@ -3,7 +3,7 @@ create database Parcial1_Adriel
 go
 use Parcial1_Adriel
 
-create table Parcial
+create table Productoes
 (
 	ProductoId int primary key identity,
 	Descripcion varchar(30),
@@ -13,7 +13,7 @@ create table Parcial
 	
 );
 
-create table Parcial1
+create table ValorInventarios
 (
 	Id int primary key identity,
 	Valor_Inventario float
@@ -26,3 +26,4 @@ create table Parcial1
 
 select * from ValorInventarios
 select * from Productoes
+select * from Ubicaciones

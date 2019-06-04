@@ -96,9 +96,7 @@ namespace Projecto_Parcial1
             DescripcionTextBox.Text = producto.Descripcion;
             ExitenTextBox.Text = producto.Existen.ToString();
             CostoTextBox.Text = producto.Costo.ToString();
-          
-
-
+         
         }
 
         private bool Validar()
@@ -266,6 +264,13 @@ namespace Projecto_Parcial1
 
         }
 
-     
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            rUbicaciones ru = new rUbicaciones();
+            ru.Show();
+
+        }
+
+        
     }
 }
