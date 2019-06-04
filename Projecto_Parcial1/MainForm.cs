@@ -29,9 +29,6 @@ namespace Projecto_Parcial1
             vi.Show();
         }
 
-        private void RegistroProductoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

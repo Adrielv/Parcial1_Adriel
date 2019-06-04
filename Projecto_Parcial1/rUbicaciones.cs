@@ -165,9 +165,6 @@ namespace Projecto_Parcial1
           
         }
 
-        private void DescripcionesTextBox_Leave(object sender, EventArgs e)
-        {
-           
-        }
+     
     }
 }

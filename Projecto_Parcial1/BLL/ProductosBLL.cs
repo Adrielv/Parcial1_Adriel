@@ -12,18 +12,38 @@ namespace Projecto_Parcial1.BLL
 {
     public class ProductosBLL
     {
-        public static bool Guardar(Producto producto)
+      
+        public static ValorInventario LlenaClase()
+        {
+            ValorInventario inventario = new ValorInventario();
+            inventario.Valor_Inventario = 0;
+            inventario.Id = 1;
+
+            return inventario;
+        }
+        public static bool Guardar(Producto productos)
         {
             bool paso = false;
-            Contexto db = new Contexto();
+            Contexto contexto = new Contexto();
+            ValorInventario inventario = new ValorInventario();
             try
             {
-                if (db.Producto.Add(producto) != null)
-                    paso = db.SaveChanges() > 0;
+                inventario = ValorInventariosBLL.Buscar(1);
+                if (inventario == null)
+                {
 
-                ValorInventario Valorinventario = ValorInventariosBLL.Buscar(1);
-                Valorinventario.Valor_Inventario += producto.Valor_Inventario;
-                ValorInventariosBLL.Modificar(Valorinventario);
+                    inventario = LlenaClase();
+                    paso = ValorInventariosBLL.Guardar(inventario);
+
+                }
+
+
+
+                if (contexto.Producto.Add(productos) != null)
+                    paso = contexto.SaveChanges() > 0;
+
+                inventario.Valor_Inventario += productos.Valor_Inventario;
+                ValorInventariosBLL.Modificar(inventario);
             }
             catch (Exception)
             {
@@ -31,11 +51,10 @@ namespace Projecto_Parcial1.BLL
             }
             finally
             {
-                db.Dispose();
+                contexto.Dispose();
             }
+
             return paso;
-
-
         }
 
         public static bool Modificar(Producto producto)
